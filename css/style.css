@@ -28,12 +28,29 @@ button, strong {
 
 /* #4 #sweat address both #app-bar s */
 h1 {
+    position: fixed;
+    width: 100%;
     background-color: #3F51B5;
     color: white;
+    line-height: 56px;
+    height: 56px;
+    padding: 1px 0px;
+    vertical-align: middle;
 }
 
 
 /* CHANNELS LIST */
+
+/* put the channels on the left side of the screen */
+#channels {
+    position: absolute;
+    height: 100%;
+    width: 40%;
+    left: 0px;
+    top: 0px;
+    display: flex;
+    justify-content: space-between;
+}
 
 /* #4 #sweat #channels */
 ul {
@@ -41,6 +58,12 @@ ul {
     background-color: white;
     /* #3 #channels #bullets removed */
     list-style-type: none;
+    position: relative;
+    top: 59px;
+    overflow-y: auto;
+    width: 100%;
+    height: 85%;
+    
 }
 
 li {
@@ -62,17 +85,31 @@ li.selected {
 li img {
     /* #4 #middle vertical alignment of icons in the #channels list */
     vertical-align: middle;
+    
+}
+
+.channel-meta {
+    position: absolute;
+    right: 0px;
+    align-items: center;
 }
 
 /* TAB BAR */
-
 /* #4 #sweat #tab-bar */
 #tab-bar {
     /* #3 #tab-bar #container should be white */
     background-color: white;
     /* #3 #tab-bar #container has all buttons centered */
     text-align: center;
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+    width: 40%;
+    vertical-align: middle;
+    display: flex;
+    justify-content: space-between;
 }
+
 
 /* #4 add styles to #tab-bar #buttons */
 #tab-bar button {
@@ -101,6 +138,18 @@ li img {
 
 /* MESSAGES */
 /* #4 select #specific #messages by class and re-assign element styles according to their #hierarchy in a nested way */
+
+/* put the messages on the right side of the screen */
+#chat {
+    /*background-color: red;*/
+    position: absolute;
+    height: 100%;
+    width: 60%;
+    right: 0px;
+    top: 0px;
+    /*display: flex;*/
+}
+
 .message {
     /* #3 #chat #width*/
     width: 80%;
@@ -110,11 +159,16 @@ li img {
 
     /* #4 #message distance to next message container*/
     margin-bottom: 8px;
+    position: relative;
+    top: 59px;
+
 }
 
 
 .message h3 {
     font-size: medium;
+    display: flex;
+    justify-content: space-between;
 }
 
 .message h3 em {
@@ -130,12 +184,17 @@ li img {
 .message p {
     background-color: white;
     padding: 16px;
+    position: relative;
 }
 
-.message button {
+.message p button {
     background-color: #CDDC39;
     color: black;
     text-transform: uppercase;
+    margin: 0;
+    position: absolute;
+    bottom: 8px;
+    right: 8px;
 }
 
 /* #4 left align own #messages using #margins */
@@ -143,3 +202,11 @@ li img {
     margin-left: 17.5%;
 }
 
+#chat-bar{
+    background-color: white;
+    text-align: left;
+    position: fixed;
+    right: 0px;
+    bottom: 0px;
+    width: 60%;
+}
