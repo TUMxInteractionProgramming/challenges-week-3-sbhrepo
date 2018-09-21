@@ -130,7 +130,7 @@ li img {
 }
 
 /* #4 the selected #tab-bar #button is #highlighted */
-#tab-bar button.selected {
+#tab-bar button#new-button {
     color: #3F51B5;
     border-bottom: 4px solid #3F51B5;
 }
@@ -148,6 +148,13 @@ li img {
     right: 0px;
     top: 0px;
     /*display: flex;*/
+}
+
+#chat h1 img {
+    position: fixed;
+    right: 16px;
+    top: 16px;
+    
 }
 
 .message {
@@ -208,5 +215,28 @@ li img {
     position: fixed;
     right: 0px;
     bottom: 0px;
+    height: 72px;
     width: 60%;
+}
+
+#emojis-button{
+    border: 0px solid white;
+    background: white;
+    line-height: 72px;
+    position: relative;
+    right: -15px;
+}
+
+#emojis-box {
+    visibility: hidden;
+    font-size: 28px;
+    background-color: white;
+    border: 1px solid black;
+    overflow: auto;
+    position: fixed;
+    text-align: left;
+    left: 41%;
+    bottom: 60px;
+    width: 300px;
+    height: 300px;
 }
